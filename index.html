@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <title>QR code</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <section class="section" id="navAll">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column">
+                            <button class="button4">
+                                <a href="#href_GeradorDeQR">
+                                    Gerador de QR
+                                </a>
+                            </button>
+                        </div>
+                        <div class="column">
+                            <button class="button4">
+                                <a href="#href-form">
+                                    Formulario
+                                </a>
+                            </button>
+                        </div>
+                        <div class="column">
+                            <button class="button4">
+                                <a href="#alertas">
+                                    Alertas
+                                </a>
+                            </button>
+                        </div>
+                        <div class="column">
+                            <button class="button4">
+                                <a href="#cards">
+                                    Cards
+                                </a>
+                            </button>
+                        </div>
+                        <div class="column">
+                            <button class="button4">
+                                <a href="#carossel">
+                                    Carossel
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section" id="texto-apresentacao">
+            <div class="container">
+                <div class="columns" id="apresentacao">
+                    <div class="column" id="space-foto">
+                        <div>
+                            <img src="./Design sem nome (4).png" id="foto-apresentacao">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div>
+                            <div id="hello">
+                                <h2 class="texto-apresentacao1">HELLO</h2>
+
+                            </div>
+
+                            <p class="texto-apresentacao2">I AM FELIPE SANTOS</p>
+                            <h1 class="texto-apresentacao3">JUNIOR FRONTEND DEVELOPER
+                            </h1>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="content" id="href_GeradorDeQR">
+            <div class="container" id="GeradorDeQR">
+                <input type="text" placeholder="Digite aqui..." class="input" onchange="generateQR()">
+                <button type="button" onclick="generateQR()">
+                    Generate QR
+                </button>
+                <div id="qr-image">
+                    <span class="error"></span><br />
+                    <img src="" id="img">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section" id="href-form">
+            <div class="columns" id="edit-form">
+                <div class="column">
+                    <form class="box" id="form">
+                        <div>
+                            <div>
+                                <label id="form-text">Nome completo</label>
+                            </div>
+                            <input type="text" id="text" placeholder="Felipe P. dos Santos" class="input">
+                        </div>
+                        <div>
+                            <div>
+                                <label id="form-text">Email</label>
+                            </div>
+                            <input type="text" id="text" placeholder="exemplo@gmail.com" class="input">
+                        </div>
+                        <div>
+                            <div>
+                                <label id="form-text">Senha</label>
+                            </div>
+
+                            <input type="text" id="text" placeholder="******" class="input">
+                        </div>
+
+
+                        <button class="button is-primary" id="botao-form">entrar</button>
+                    </form>
+                </div>
+                <div class="column">
+                    <form class="box" id="form">
+                        <div>
+                            <div>
+                                <label id="form-text">Nome completo</label>
+                            </div>
+                            <input type="text" id="text" placeholder="Felipe P. dos Santos" class="input">
+                        </div>
+                        <div>
+                            <div>
+                                <label id="form-text">Email</label>
+                            </div>
+                            <input type="text" id="text" placeholder="exemplo@gmail.com" class="input">
+                        </div>
+                        <div>
+                            <div>
+                                <label id="form-text">Senha</label>
+                            </div>
+
+                            <input type="text" id="text" placeholder="******" class="input">
+                        </div>
+
+                        <div>
+                            <div>
+                                <label id="form-text">Confirmar enha</label>
+                            </div>
+
+                            <input type="text" id="text" placeholder="******" class="input">
+                        </div>
+
+
+                        <button class="button is-primary" id="botao-form">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="section" id="alertas">
+            <div class="columns">
+                <div class="column" id="fundo-botao">
+                    <button onclick="abrirAlerta()">Excluir</button>
+                </div>
+                <div class="column" id="fundo-botao">
+                    <button onclick="abrirAlerta2()">Escreva algo</button>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section" id="cards">
+            <div class="container-card">
+                <!-- Primeiro card-->
+                <div class="card">
+                    <div class="img">
+                        <img src="./img/RJ.jfif" alt="">
+                    </div>
+                    <h2 class="text-card">Rio de Janeiro</h2>
+                    <div class="content">
+                        <p>
+                            O turismo no estado do Rio de Janeiro oferece diversas atrações históricas, naturais e culturais. A capital fluminense é internacionalmente conhecida pela beleza de suas praias e morros, além de ser um grande polo de turismo cultural, contemplada por diversos museus, teatros e casas de espetáculos.
+                        </p>
+                        <a href="tel:+">Saiba mais</a>
+                    </div>
+                </div>
+                <!-- Segundo card-->
+                <div class="card">
+                    <div class="img">
+                        <img src="./img/Curitiba.png" alt="">
+                    </div>
+                    <h2 class="text-card">Curitiba</h2>
+                    <div class="content">
+                        <p>
+                            A cidade tem um bom índice de desenvolvimento humano (IDH) e consegue oferecer boa qualidade de vida. Isso faz da cidade uma excelente opção para quem deseja morar em Curitiba ou investir na cidade. A cidade é conhecida pelas ruas limpas, pontos turísticos e parques que encantam moradores e turistas.
+                        </p>
+                        <a href="tel:+">Saiba mais</a>
+                    </div>
+                </div>
+                <!-- Terceiro card-->
+                <div class="card">
+                    <div class="img">
+                        <img src="./img/BH.jpg" alt="">
+                    </div>
+                    <h2 class="text-card">Belo Horizonte</h2>
+                    <div class="content">
+                        <p>
+                            Belo Horizonte, capital de Minas Gerais, oferece uma mistura entre tradição e modernidade sem perder o charme do interior. Em cada ponto turístico de Belo Horizonte, é possível vivenciar um pouquinho da história mineira.
+                            Em 1980 o Papa João Paulo II esteve em Beagá e celebrou uma Missa Campal 
+                        </p>
+                        <a href="tel:+">Saiba mais</a>
+                    </div>
+                </div>
+                <!-- quarto card-->
+                <div class="card">
+                    <div class="img">
+                        <img src="./img/Bahia.jfif" alt="">
+                    </div>
+                    <h2 class="text-card">Bahia</h2>
+                    <div class="content">
+                        <p>
+                            Na Bahia, a luta pela Independência veio antes da brasileira, e só concretizou-se quase um ano depois do 7 de setembro de 1822. A contrário do grito às margens do Ipiranga, que ocorreu de forma pacífica, na Bahia ocorreu muito derramamento de sangue na tentativa da província se ver 
+                        </p>
+                        <a href="tel:+">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <div class="container-card-2">
+                <div class="face">
+                    <div class="front">
+                        <h2>O QUE É FRONT-END</h2>
+                    </div>
+                    <div class="back">
+                        <p>Front-end é toda parte da programação relativa à interface de uma aplicação. 
+                           
+                            Para que fique mais claro, imagine que você acessou o site de sua rede social favorita.</p>
+                    </div>
+                </div>
+                <div class="face">
+                    <div class="front">
+                        <h2>O QUE É BACK-END? </h2>
+                    </div>
+                    <div class="back">
+                        <p>O desenvolvimento back-end cuida das engrenagens de uma aplicação web, criando códigos para que as funções do site sejam executadas. Como o próprio nome sugere, é um trabalho de bastidores.</p>
+                    </div>
+                </div>
+                <div class="face">
+                    <div class="front">
+                        <h2>O QUE É FULL STACK?</h2>
+                    </div>
+                    <div class="back">
+                        <p>Como sua própria denominação indica, o desenvolvedor full stack é o profissional habilitado para compreender e operar em todas as camadas do desenvolvimento de um projeto, desde a criação de servidores internos até interfaces de comunicação com o usuário final.</p>
+                    </div>
+                </div>
+                      
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section" id="carossel">
+            <h2>Aqui vai ser os carossel</h2>
+        </section>
+        
+        <hr>
+
+    </main>
+
+    <div onclick="scrollToTop()" class="scrollTop">Top</div>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+           <h3>footer</h3>
+          </p>
+        </div>
+      </footer>
+
+</body>
+
+</html>
